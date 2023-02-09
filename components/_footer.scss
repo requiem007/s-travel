@@ -1,0 +1,32 @@
+.footer {
+
+    // .footer__container
+    &__container {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    // .footer__social
+    &__social {
+        display: flex;
+        justify-content: center;
+        column-gap: 30px;
+    }
+}
+
+.social {
+
+    // .social__link
+    &__link {
+        font-size: 2rem;
+        color: $greyColor;
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            color: $actionColor;
+        }
+    }
+
+
+
+}

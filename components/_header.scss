@@ -1,0 +1,40 @@
+.header {
+
+    // .header__container
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        gap: 20px;
+    }
+
+    // .header__menu
+    &__menu {
+        display: flex;
+    }
+
+    // .header__list
+    &__list {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    // .header__link
+    &__link {
+        font-size: 18px;
+        color: $greyColor;
+        transition: all 0.3s ease 0s;
+
+        &:hover {
+            color: $actionColor;
+        }
+    }
+
+
+}
+
+.logo {}
+
+.link {}

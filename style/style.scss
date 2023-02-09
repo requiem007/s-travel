@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,700&display=swap");
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    // Прижимаем footer
+    >main {
+        flex: 1 1 auto;
+    }
+
+    // Фикс для слайдеров
+    >* {
+        min-width: 0;
+    }
+}
+
+[class*="__container"] {
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 0 15px;
+    min-height: 100%;
+}
+
+body.lock {
+    overflow: hidden;
+}
+
+[class*="-ibg"] {
+    position: relative;
+
+    img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 100px;
+        left: 100px;
+        object-fit: cover;
+    }
+}
+
+[class*="-ibg_contain"] {
+    img {
+        object-fit: contain;
+    }
+}
+
+@import '../components/variables';
+@import '../icon-fonts/style.css';
+@import '../components/cancel';
+@import '../components/header';
+@import '../components/main';
+@import '../components/about';
+
+@import '../components/footer';
