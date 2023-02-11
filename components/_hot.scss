@@ -1,0 +1,199 @@
+.hot {
+
+    // .hot__section
+    &__section {}
+
+    // .hot__container
+    &__container {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    // .hot__content
+    &__content {
+        display: flex;
+        column-gap: 30px;
+    }
+
+    // .hot__image
+    &__image {
+        flex: 0 0 50%;
+        position: relative;
+        padding-bottom: 10%;
+        width: 250px;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+    }
+
+    // .hot__info
+    &__info {
+        flex: 1 1 50%;
+    }
+}
+
+.info {
+
+    // .info__title
+    &__title {
+        font-size: 2.2rem;
+
+        a {
+            color: orange;
+        }
+    }
+
+    // .info__sub-title
+    &__sub-title {
+        font-size: 1.6rem;
+        color: $greyColor;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    // .info__price
+    &__price {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.6rem;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        :first-child {
+            font-size: 2rem;
+        }
+
+        :last-child {
+            font-size: 2rem;
+        }
+    }
+
+    // .info__people
+    &__people {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.8rem;
+            // padding-left: 30px;
+        }
+
+    }
+
+    &__people-icon {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    // .info__food
+    &__food {
+        display: flex;
+        column-gap: 10px;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.8rem;
+            // padding-left: 30px;
+        }
+    }
+
+    &__food-icon {
+        img {
+            max-width: 20px;
+            max-height: 20px;
+        }
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    // .info__arrived
+
+    &__arrived {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.arrived {
+    &__icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    &__info {
+        display: flex;
+        column-gap: 30px;
+    }
+
+    // .arrived__from
+    &__from {
+        position: relative;
+
+        ::before {
+            // content: url(../assets/icons/flying.svg);
+            top: 10px;
+            display: block;
+            left: 100px;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+        }
+    }
+
+    // .arrived__date
+    &__date {
+        font-size: 1.4rem;
+    }
+
+    // .arrived__town
+    &__town {
+        font-size: 1.2rem;
+        color: rgb(122, 115, 115);
+    }
+
+    // .arrived__to
+    &__to {}
+}
+
+.booking {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+    padding: 15px 60px 15px 60px;
+    border-radius: 10px;
+    background-color: aqua;
+    color: orange;
+    font-size: 2rem;
+}

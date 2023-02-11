@@ -162,10 +162,15 @@ h6 {
 }
 
 .image-slider__image {
-  text-align: center;
+  position: relative;
+  padding-bottom: 60%;
 }
 .image-slider__image img {
-  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .about {
@@ -227,6 +232,152 @@ h6 {
   font-size: 1.6rem;
   padding-left: 5px;
   color: rgb(50, 49, 49);
+}
+
+.hot__container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.hot__content {
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.hot__image {
+  flex: 0 0 50%;
+  position: relative;
+  padding-bottom: 10%;
+  width: 250px;
+}
+.hot__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+.hot__info {
+  flex: 1 1 50%;
+}
+
+.info__title {
+  font-size: 2.2rem;
+}
+.info__title a {
+  color: orange;
+}
+.info__sub-title {
+  font-size: 1.6rem;
+  color: rgb(74, 68, 68);
+}
+.info__sub-title:not(:last-child) {
+  margin-bottom: 10px;
+}
+.info__price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.6rem;
+}
+.info__price:not(:last-child) {
+  margin-bottom: 10px;
+}
+.info__price :first-child {
+  font-size: 2rem;
+}
+.info__price :last-child {
+  font-size: 2rem;
+}
+.info__people {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.info__people:not(:last-child) {
+  margin-bottom: 10px;
+}
+.info__people p {
+  font-size: 1.8rem;
+}
+.info__people-icon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info__food {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  align-items: center;
+}
+.info__food:not(:last-child) {
+  margin-bottom: 10px;
+}
+.info__food p {
+  font-size: 1.8rem;
+}
+.info__food-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.info__food-icon img {
+  max-width: 20px;
+  max-height: 20px;
+}
+.info__arrived {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.info__arrived:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.arrived__icon {
+  width: 20px;
+  height: 20px;
+}
+.arrived__info {
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.arrived__from {
+  position: relative;
+}
+.arrived__from ::before {
+  top: 10px;
+  display: block;
+  left: 100px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+.arrived__date {
+  font-size: 1.4rem;
+}
+.arrived__town {
+  font-size: 1.2rem;
+  color: rgb(122, 115, 115);
+}
+.booking {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px;
+  padding: 15px 60px 15px 60px;
+  border-radius: 10px;
+  background-color: aqua;
+  color: orange;
+  font-size: 2rem;
 }
 
 .footer__container {
