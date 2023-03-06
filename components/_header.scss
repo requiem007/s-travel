@@ -1,4 +1,5 @@
 .header {
+    background-color: aqua;
 
     // .header__container
     &__container {
@@ -7,6 +8,16 @@
         padding-top: 30px;
         padding-bottom: 30px;
         gap: 20px;
+        align-items: center;
+        max-height: 80px;
+    }
+
+    &__logo {
+
+        img {
+            max-width: 130px;
+            max-height: 80%;
+        }
     }
 
     // .header__menu
@@ -17,7 +28,8 @@
     // .header__list
     &__list {
         display: flex;
-        gap: 40px;
+        column-gap: 40px;
+        row-gap: 5px;
         flex-wrap: wrap;
     }
 
@@ -31,10 +43,4 @@
             color: $actionColor;
         }
     }
-
-
 }
-
-.logo {}
-
-.link {}

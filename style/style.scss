@@ -24,6 +24,10 @@
     min-height: 100%;
 }
 
+body {
+    position: relative;
+}
+
 body.lock {
     overflow: hidden;
 }
@@ -47,6 +51,8 @@ body.lock {
     }
 }
 
+
+
 @import '../components/variables';
 @import '../icon-fonts/style.css';
 @import '../components/cancel';
@@ -54,5 +60,6 @@ body.lock {
 @import '../components/main';
 @import '../components/about';
 @import '../components/hot';
+@import '../components/modal';
 
 @import '../components/footer';

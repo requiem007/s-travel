@@ -7,11 +7,19 @@
         padding-bottom: 40px;
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: $mobile) {
+            flex-direction: column;
+        }
     }
 
     // .about__text
     &__content {
         padding: 20px;
+
+        @media (max-width:$mobileSmall) {
+            padding: 0;
+        }
     }
 
     // .about__title
@@ -19,6 +27,10 @@
         max-width: 800px;
         font-size: 2.6rem;
         color: rgb(18, 108, 108);
+
+        @media (max-width: $mobileSmall) {
+            font-size: 2rem;
+        }
 
         &:not(:last-child) {
             margin-bottom: 30px;
@@ -42,6 +54,18 @@
     &__image {
         img {
             max-width: 250px;
+
+            @media (max-width: $mobile) {
+                max-width: 200px;
+            }
+
+            @media (max-width:$mobileSmall) {
+                max-width: 150px;
+            }
+        }
+
+        @media (max-width: $mobile) {
+            text-align: center;
         }
     }
 
@@ -94,5 +118,9 @@
         font-size: 1.6rem;
         padding-left: 5px;
         color: rgb(50, 49, 49);
+    }
+
+    @media (max-width: $mobile) {
+        text-align: center;
     }
 }

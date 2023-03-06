@@ -14,19 +14,19 @@
             <header class="header">
                 <div class="header__container">
                     <div class="header__logo">
-                        <img src="" alt="" />
+                        <img src="./assets/icons/Logo_1-removebg-preview2.png" alt="" />
                     </div>
                     <nav class="header__menu">
                         <ul class="header__list">
-                            <li><a class="header__link" href="#">Головна</a></li>
-                            <li><a class="header__link" href="#">Пропозиції тижня</a></li>
-                            <li><a class="header__link" href="#">Контакти</a></li>
+                            <li><a class="header__link" href="#main">Головна</a></li>
+                            <li><a class="header__link" href="#hot">Пропозиції тижня</a></li>
+                            <li><a class="header__link" href="#contacts">Контакти</a></li>
                         </ul>
                     </nav>
                 </div>
             </header>
             <div class="main">
-                <section class="main__section">
+                <section id="main" class="main__section">
                     <div class="main__container">
                         <div class="swiper">
                             <div class="image__slider swiper-container">
@@ -61,14 +61,56 @@
                         </div>
                     </div>
                 </section>
-                <section class="hot__section">
+                <section id="hot" class="hot__section">
                     <div class="hot__container">
                         <div class="hot__content">
                             <div class="hot__image">
                                 <img src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/293437939.jpg?k=aec262184b686e25e769f4d9acef33438fa262ed302b0bd391e0ab6e321efb60&o=&hp=1" alt="" />
                             </div>
                             <div class="hot__info info">
-                                <h2 class="info__title"><a href="https://www.booking.com/hotel/eg/caribbean-world-resorts.uk.html"> Caribbean World Resort Soma Bay 5*</a></h2>
+                                <h2 class="info__title"><a target="_blank" href="https://www.booking.com/hotel/eg/caribbean-world-resorts.uk.html"> Caribbean World Resort Soma Bay 5*</a></h2>
+                                <h3 class="info__sub-title">Хургада, Єгипет</h3>
+                                <div class="info__price">
+                                    <p>24 400</p>
+                                    <p>/</p>
+                                    <p>7 ночей</p>
+                                </div>
+                                <div class="info__people">
+                                    <div class="info__people-icon">
+                                        <img src="./assets/icons/sleep.svg" alt="room" />
+                                    </div>
+                                    <p>2 дорослих</p>
+                                </div>
+                                <div class="info__food">
+                                    <div class="info__food-icon">
+                                        <img src="./assets/icons/food.svg" alt="food" />
+                                    </div>
+                                    <p>Все включено</p>
+                                </div>
+                                <div class="info__arrived arrived">
+                                    <div class="arrived__icon">
+                                        <img src="./assets/icons/travel.svg" alt="flying" />
+                                    </div>
+                                    <div class="arrived__info">
+                                        <div class="arrived__from">
+                                            <p class="arrived__date">28 лютого, нд</p>
+                                            <p class="arrived__town">Одеса (Odesa)</p>
+                                        </div>
+                                        <div class="arrived__to">
+                                            <p class="arrived__date">7 березня, нд</p>
+                                            <p class="arrived__town">Хургада (Hurghada) / Сома Бей (Soma Bay)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="booking">Забронювати</button>
+                            </div>
+                        </div>
+                        <div class="hot__content reverse">
+                            <div class="hot__image">
+                                <img src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/293437939.jpg?k=aec262184b686e25e769f4d9acef33438fa262ed302b0bd391e0ab6e321efb60&o=&hp=1" alt="" />
+                            </div>
+                            <div class="hot__info info">
+                                <h2 class="info__title"><a target="_blank" href="https://www.booking.com/hotel/eg/caribbean-world-resorts.uk.html"> Caribbean World Resort Soma Bay 5*</a></h2>
                                 <h3 class="info__sub-title">Хургада, Єгипет</h3>
                                 <div class="info__price">
                                     <p>24 400</p>
@@ -107,7 +149,7 @@
                         </div>
                     </div>
                 </section>
-                <section class="about">
+                <section id="contacts" class="about">
                     <div class="about__container">
                         <div class="about__content">
                             <h2 class="about__title">Світлана Піреєва- Ваш персональний менеджер з туризму</h2>
@@ -172,6 +214,31 @@
                     </div>
                 </div>
             </footer>
+            <div id="popup" class="popup">
+                <div class="popup__body">
+                    <div class="popup__content">
+                        <button class="close__popup close">&times;</button>
+                        <div class="form">
+                            <form action="#" id="form" class="form__body">
+                                <h3 class="form__title">Залиште тут свої дані, і ми з вами обов'язково зв'яжемося</h3>
+                                <div class="form__item">
+                                    <label for="formName" class="form__label">Ім'я<span>*</span></label>
+                                    <input id="formName" type="text" name="name" class="form__input _req" />
+                                </div>
+                                <div class="form__item">
+                                    <label for="formEmail" class="form__label">Email</label>
+                                    <input id="formEmail" type="email" name="email" class="form__input _req _email" />
+                                </div>
+                                <div class="form__item">
+                                    <label for="formTel" class="form__label">Телефон<span>*</span></label>
+                                    <input id="formTel" type="tel" name="tel" class="form__input" />
+                                </div>
+                                <button type="submit" class="form__button">Забронювати</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script src="./script/index.js"></script>
