@@ -48,6 +48,10 @@
         padding: 70px 60px 40px;
         border-radius: 30px;
         position: relative;
+
+        @media (max-width: $mobileSmall) {
+            padding: 60px 20px 40px;
+        }
     }
 }
 

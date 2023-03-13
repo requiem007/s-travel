@@ -1,10 +1,22 @@
 .hot {
 
     // .hot__container
-    &__container {}
+    &__container {
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
 
     .reverse {
         padding-top: 0px;
+    }
+
+    // hot__title
+    &__title {
+        text-align: center;
+        font-size: 2.6rem;
+        color: $greyColor;
+        padding-top: 10px;
+        padding-bottom: 20px;
     }
 
     // .hot__content
@@ -12,8 +24,8 @@
         display: flex;
         column-gap: 30px;
         row-gap: 20px;
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
 
         @media (max-width: $mobile) {
             flex-direction: column;
