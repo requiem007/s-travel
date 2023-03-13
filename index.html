@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="#" />
         <link href="https://fonts.googleapis.com/css?family=Roboto:regular700display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
         <link rel="stylesheet" href="./style/style.css" />
@@ -18,10 +19,11 @@
                     </div>
                     <nav class="header__menu">
                         <ul class="header__list">
-                            <li><a class="header__link" href="#main">Головна</a></li>
-                            <li><a class="header__link" href="#hot">Пропозиції тижня</a></li>
-                            <li><a class="header__link" href="#contacts">Контакти</a></li>
+                            <li><a data-goto=".main__section" class="header__link" href="#">Головна</a></li>
+                            <li><a data-goto=".hot__section" class="header__link" href="#">Пропозиції тижня</a></li>
+                            <li><a data-goto=".about" class="header__link" href="#">Контакти</a></li>
                         </ul>
+                        <button type="button" class="icon-menu"><span></span></button>
                     </nav>
                 </div>
             </header>
@@ -55,14 +57,15 @@
                                     </div>
                                 </div>
                                 <!-- If we need navigation buttons -->
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
+                                <!-- <div class="swiper-button-prev"></div> -->
+                                <!-- <div class="swiper-button-next"></div> -->
                             </div>
                         </div>
                     </div>
                 </section>
                 <section id="hot" class="hot__section">
                     <div class="hot__container">
+                        <h2 class="hot__title">Пропозиції тижня</h2>
                         <div class="hot__content">
                             <div class="hot__image">
                                 <img src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/293437939.jpg?k=aec262184b686e25e769f4d9acef33438fa262ed302b0bd391e0ab6e321efb60&o=&hp=1" alt="" />

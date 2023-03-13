@@ -21,19 +21,6 @@ const swiper = new Swiper(".image__slider", {
     effect: "fade",
 });
 
-// smooth page navigation
-
-document.querySelector(".header__list").addEventListener("click", function (e) {
-    e.preventDefault();
-    // 2. определить таргет элемент
-    console.log(e.target);
-    if (e.target.classList.contains("header__link")) {
-        const href = e.target.getAttribute("href");
-        console.log(href);
-        document.querySelector(href).scrollIntoView({ behavior: "smooth" });
-    }
-});
-
 // modal
 
 const booking = document.querySelectorAll(".booking");
@@ -136,18 +123,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (error === 0) {
             popupBody.classList.add("sending");
-            //     let response = await fetch("sendmail.php", {
-            //         method: "POST",
-            //         body: formData,
-            //     });
-            //     if (response.ok) {
-            //         let result = await response.json();
-            //         console.log(result.message);
-            //         form.reset();
-            //     } else {
-            //         console.log("mistake");
-            //     }
-            // } else {
+            let response = await fetch("sendmail.php", {
+                method: "POST",
+                body: formData,
+            });
+            if (response.ok) {
+                let result = await response.json();
+                console.log(result.message);
+                form.reset();
+                popupBody.classList.remove("sending");
+            } else {
+                console.log("mistake");
+                popupBody.classList.remove("sending");
+            }
+        } else {
         }
     }
 
@@ -188,3 +177,39 @@ document.addEventListener("DOMContentLoaded", function () {
         return !/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/.test(input.value);
     }
 });
+
+// burger
+
+const burgerIcon = document.querySelector(".icon-menu");
+const menuBody = document.querySelector(".header__list");
+
+if (burgerIcon) {
+    burgerIcon.addEventListener("click", function (e) {
+        document.body.classList.toggle("lock");
+        burgerIcon.classList.toggle("menu-open");
+        menuBody.classList.toggle("menu-open");
+    });
+}
+//плавная прокрутка по клику
+
+const menuLinks = document.querySelectorAll(".header__link[data-goto]"); //собрал в массив все ссылки с дата-атрибутов data-goto
+console.log(menuLinks);
+if (menuLinks.length > 0) {
+    menuLinks.forEach((menuLink) => {
+        menuLink.addEventListener("click", onMenuLinkClick);
+    });
+}
+function onMenuLinkClick(e) {
+    const menuLink = e.target;
+    if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+        const gotoBlock = document.querySelector(menuLink.dataset.goto);
+        if (burgerIcon.classList.contains("menu-open")) {
+            document.body.classList.remove("lock");
+            burgerIcon.classList.remove("menu-open");
+            menuBody.classList.remove("menu-open");
+        }
+
+        gotoBlock.scrollIntoView({ behavior: "smooth" });
+        e.preventDefault();
+    }
+}
